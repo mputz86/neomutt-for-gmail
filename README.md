@@ -5,7 +5,9 @@ A Nix flake providing Gmail-optimized configuration for neomutt, lieer, and notm
 ## What This Provides
 
 - **Gmail-optimized neomutt configuration** with virtual mailboxes, keybindings, and thread-based sorting
-- **Lieer, notmuch, and msmtp** enabled by default
+- **Lieer** for efficient Gmail sync with sensible defaults
+- **Notmuch** for fast email indexing and search
+- **Muttdown** for composing emails in Markdown with automatic HTML conversion
 - **Virtual mailboxes** for Inbox, Unread, Starred, Sent, Drafts, and All Mail
 - **Gmail-style keybindings** (S for spam, A for archive, I for inbox)
 - **Vim keybindings** and sidebar navigation
@@ -106,7 +108,9 @@ neomutt
 ## What's Configured
 
 ### Lieer
-- Enabled by default
+- Enabled by default with automatic sync
+- Drops non-existing labels automatically
+- Ignores "important" label from Gmail
 - Ignores lieer metadata files in notmuch
 
 ### Notmuch
@@ -137,8 +141,13 @@ neomutt
   - Sidebar enabled (20 chars wide)
   - 10 lines of index in pager view
 
+### Muttdown
+- Automatically converts Markdown emails to HTML
+- Enabled by default as the sendmail command
+- Supports inline images, code blocks, and rich formatting
+
 ### MSMTP
-- Enabled by default for sending mail
+- Enabled by default for SMTP transport
 
 ## Customization
 
