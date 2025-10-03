@@ -63,11 +63,11 @@
         "poetry2nix": "poetry2nix"
       },
       "locked": {
-        "lastModified": 1732017575,
-        "narHash": "sha256-Dj0Hvrjd4tI+W6s+zJHFKicif3KftszAd72m5Mv6mm8=",
+        "lastModified": 1759513140,
+        "narHash": "sha256-PWj+Hk+uq7GE12SHdc1S70xmeKtYK3LOJrEpLehZdVA=",
         "owner": "jevy",
         "repo": "muttdown",
-        "rev": "1aeb704bbacdb30d2ceb91f52da58f0a66894bbf",
+        "rev": "1b9486d5415c3d3c70a270dd160fe74b82b39300",
         "type": "github"
       },
       "original": {

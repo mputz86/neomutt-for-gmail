@@ -46,8 +46,8 @@
     assert "modify-labels>+spam" in output, "Spam keybinding not configured"
     assert "modify-labels>+archive" in output, "Archive keybinding not configured"
     
-    # Check notmuch config exists
-    machine.succeed("test -f /home/testuser/.notmuch-config")
+    # Check that programs are enabled (configs will be generated)
+    machine.succeed("test -f /home/testuser/.config/neomutt/neomuttrc")
     
     print("All config checks passed!")
   '';

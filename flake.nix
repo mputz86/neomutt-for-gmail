@@ -13,9 +13,7 @@
   outputs = { self, nixpkgs, home-manager, muttdown }: {
     homeManagerModules.default = { config, lib, pkgs, ... }:
     let
-      muttdownPkg = if muttdown.packages.${pkgs.system} ? default
-                    then muttdown.packages.${pkgs.system}.default
-                    else muttdown.packages.${pkgs.system}.muttdown;
+      muttdownPkg = muttdown.packages.${pkgs.system}.default;
     in {
       options.accounts.email.accounts = lib.mkOption {
         type = lib.types.attrsOf (lib.types.submodule {
