@@ -66,6 +66,12 @@
                 msmtp.enable = true;
                 neomutt.enable = true;
               };
+
+              home.file = let
+                credsFile = ./.credentials.gmailieer.json;
+              in nixpkgs.lib.optionalAttrs (builtins.pathExists credsFile) {
+                "Maildir/gmail/.credentials.gmailieer.json".source = credsFile;
+              };
             };
           };
         }

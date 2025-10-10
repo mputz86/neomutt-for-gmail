@@ -4,3 +4,4 @@ result-*
 *.swo
 *~
 .direnv/
+nixos.qcow2

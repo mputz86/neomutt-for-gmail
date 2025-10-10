@@ -45,6 +45,22 @@ gmi sync
 neomutt
 ```
 
+## Finding Generated Configuration Files
+
+After building the VM, you can inspect the generated configuration files without running the VM:
+
+```bash
+# Find the home-manager generation directory
+find -L result -name "*home-manager-generation" -type d
+
+# Check the generated neomutt configuration
+cat /nix/store/*-home-manager-generation/home-files/.config/neomutt/neomuttrc
+cat /nix/store/*-home-manager-generation/home-files/.config/neomutt/gmail
+
+# Or use the service file to find the exact path
+cat result/system/etc/systemd/system/home-manager-testuser.service | grep ExecStart
+```
+
 **Note**: The lieer systemd service will fail until you successfully run `gmi auth` with valid credentials. This is expected behavior for the test environment with invalid credentials.
 
 The VM comes pre-configured with:
